@@ -81,6 +81,7 @@
 
 import React from 'react'
 import Button from "./Component/Button"
+import {useRef} from 'react'
 // type User1 = {
 //   name : string,
 //   age : number
@@ -109,10 +110,61 @@ interface User4 extends User3 {
 
 
 
-export default function App() {
+// export default function App() {
+
+// const handleClick = (e : React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+
+// }
+// let value;
+// let name ;
+
+// const handleChange = (e : React.ChangeEvent<HTMLInputElement>)=>{
+// value = e.target.value 
+// name = e.target.name 
+// }
+
+// const refButton = useRef<HTMLButtonElement>(null)
+// const refInput = useRef<HTMLInputElement>(null)
+
+//   return (
+//     <div>
+//       <Button buttonTitle="button title"/>
+
+//       <button onClick={(e)=>{
+        
+//       }}>click</button>
+
+//       <input type="text" onChange={(e)=>{
+
+//       }} />
+
+//       <button ref={refButton}>click</button>
+//       <input type="text" />
+//     </div>
+//   )
+// }
+
+
+////////////////////////omit
+
+// import React from 'react'
+
+
+type User1 = {
+  name : string ,
+  age : number  
+}
+
+type User2 = Omit<User1 , "age" | "name">
+
+let test = "teat"
+
+function App() {
   return (
     <div>
-      <Button buttonTitle="button title"/>
+    {test}
     </div>
   )
 }
+
+export default App

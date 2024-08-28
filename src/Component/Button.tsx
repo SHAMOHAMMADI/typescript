@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ComponentPropsWithoutRef, ComponentPropsWithRef } from 'react'
 import { ComponentProps } from 'react'
 
 
@@ -13,10 +13,17 @@ import { ComponentProps } from 'react'
 // type button = ComponentProps<"button"> 
 
 // or extra props
-type button = ComponentProps<"button"> & {
-    buttonTitle?:string
+// type button = ComponentProps<"button"> & {
+//     buttonTitle?:string
+// }
+//if you want to use useRef
+// type button = ComponentPropsWithRef<'button'> & {
+//   buttonTitle ?: string
+// }
+//without using useRef
+type button = ComponentPropsWithoutRef<'button'> & {
+  buttonTitle ?: string
 }
-
 
 
 function Button({type , onClick , onChange , buttonTitle}:button) {
